@@ -8,13 +8,13 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "css-build": "npx tailwindcss -i ./src/css/App.css -o ./src/css/tailwind.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,5 +35,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
   }
 }
