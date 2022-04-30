@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply bg-orange py-2.5 px-4 text-white font-normal text-base flex items-center justify-center gap-2 rounded cursor-pointer hover:bg-orange-light;
+}
