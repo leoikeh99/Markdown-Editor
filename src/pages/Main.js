@@ -5,12 +5,12 @@ import { Preview } from "../components/Preview";
 
 export const Main = () => {
   return (
-    <div>
+    <main id="main" className="transition-transform overflow-y-hidden">
       <Header />
       <div className="flex">
         <Markdown />
         <Preview />
       </div>
-    </div>
+    </main>
   );
 };

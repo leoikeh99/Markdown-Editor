@@ -110,3 +110,15 @@ body {
 .preview pre p {
   @apply text-dark-gray font-normal text-sm;
 }
+
+.open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  transform: translateX(250px);
+}
+
+.openSidebar {
+  left: 0;
+}
