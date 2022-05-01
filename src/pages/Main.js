@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../components/Header";
 import { Markdown } from "../components/Markdown";
 import { Preview } from "../components/Preview";
 
 export const Main = () => {
+  const [showMarkdown, setShowMarkdown] = useState(true);
   return (
-    <main id="main" className="transition-transform overflow-y-hidden">
+    <main id="main" className="transition-transform overflow-y-hidden z-0">
       <Header />
       <div className="flex">
-        <Markdown />
-        <Preview />
+        {showMarkdown && <Markdown />}
+        <Preview
+          showMarkdown={showMarkdown}
+          setShowMarkdown={setShowMarkdown}
+        />
       </div>
     </main>
   );

@@ -18,13 +18,27 @@ module.exports = {
         "5-2": "24px",
         95: "95%",
         250: "250px",
+        343: "343px",
       },
       fontFamily: {
         Roboto: ['"Roboto"', "san-serif"],
         "Roboto-Mono": ['"Roboto Mono"', "monospace"],
+        "Roboto-Slab": ['"Roboto Slab"', "serif"],
       },
       letterSpacing: {
         2: "2px",
+      },
+      keyframes: {
+        "pop-in": {
+          "0%": { transform: "scale(0.6)", opacity: 0 },
+          "100%": { transform: "rotate(1)", opacity: 1 },
+        },
+      },
+      animation: {
+        "pop-in": "pop-in 0.3s ease-in-out",
+      },
+      maxWidth: {
+        672: "672px",
       },
     },
   },

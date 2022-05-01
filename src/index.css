@@ -14,7 +14,7 @@ body {
 }
 
 .btn {
-  @apply bg-orange py-2.5 px-4 text-white font-normal text-base flex items-center justify-center gap-2 rounded cursor-pointer hover:bg-orange-light;
+  @apply bg-orange py-2.5 px-4 text-white font-normal text-base flex items-center justify-center gap-2 rounded cursor-pointer hover:bg-orange-light font-Roboto;
 }
 
 .calcHeight {
@@ -117,8 +117,39 @@ body {
   right: 0;
   width: 100vw;
   transform: translateX(250px);
+  z-index: -1;
 }
 
 .openSidebar {
   left: 0;
+}
+
+.overlay {
+  @apply fixed top-0 left-0 right-0 bottom-0 bg-black opacity-50;
+}
+
+.menu {
+}
+
+.menu .item {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 6px;
+}
+
+.animate1 {
+  transform: rotate(44deg);
+  position: relative;
+  top: 10px;
+}
+
+.animate2 {
+  opacity: 0;
+}
+
+.animate3 {
+  transform: rotate(-44deg);
+  position: relative;
+  bottom: 5px;
 }
