@@ -1,7 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .btn {
   @apply bg-orange py-2.5 px-4 text-white font-normal text-base flex items-center justify-center gap-2 rounded cursor-pointer hover:bg-orange-light;
+}
+
+.calcHeight {
+  height: calc(100vh - 72px);
+}
+
+.calcHeight2 {
+  height: calc(100% - 51px);
+}
+
+.preview {
+  font-family: "Roboto Slab", serif;
+}
+
+.preview h1 {
+  font-size: 32px;
+  line-height: 42px;
+  @apply text-dark-gray mb-5 font-bold;
+}
+
+.preview h2 {
+  font-size: 24px;
+  line-height: 31px;
+  @apply text-dark-gray mb-5 font-light;
+}
+
+.preview h3 {
+  font-size: 28px;
+  line-height: 37px;
+  @apply text-dark-gray mb-5 font-bold;
+}
+
+.preview h4 {
+  font-size: 20px;
+  line-height: 37px;
+  @apply text-dark-gray mb-5 font-bold;
+}
+
+.preview h5 {
+  font-size: 16px;
+  line-height: 21px;
+  @apply text-dark-gray mb-5 font-bold;
+}
+
+.preview h6 {
+  font-size: 14px;
+  line-height: 21px;
+  @apply text-orange mb-5 font-bold;
+}
+
+.preview p {
+  @apply text-sm font-normal text-light-gray-3 mb-5;
+  line-height: 24px;
+}
+
+.preview li {
+  line-height: 24px;
+}
+
+.preview ul {
+  @apply px-4 text-sm font-normal text-light-gray-3 mb-5;
+}
+
+.preview ol {
+  @apply list-decimal px-4 text-sm font-normal text-light-gray-3 mb-5;
+}
+
+.preview ul li::before {
+  content: "\2022";
+  color: #e46643;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.preview blockquote {
+  @apply p-6 bg-light-gray-1/2 rounded border-l-4 border-orange mb-5;
+}
+
+.preview blockquote p {
+  @apply text-sm text-dark-gray font-bold m-0;
+}
+
+.preview code {
+  @apply text-dark-gray;
+}
+
+.preview pre {
+  @apply p-6 bg-light-gray-1/2 rounded mb-5;
+}
+
+.preview pre p {
+  @apply text-dark-gray font-normal text-sm;
 }
