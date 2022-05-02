@@ -5,6 +5,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  @apply bg-white dark:bg-dark-gray-4;
 }
 
 * {
@@ -25,6 +26,10 @@ body {
   height: calc(100% - 51px);
 }
 
+.calcHeight3 {
+  height: calc(100vh - 200px);
+}
+
 .preview {
   font-family: "Roboto Slab", serif;
 }
@@ -32,41 +37,41 @@ body {
 .preview h1 {
   font-size: 32px;
   line-height: 42px;
-  @apply text-dark-gray mb-5 font-bold;
+  @apply text-dark-gray mb-5 font-bold dark:text-white;
 }
 
 .preview h2 {
   font-size: 24px;
   line-height: 31px;
-  @apply text-dark-gray mb-5 font-light;
+  @apply text-dark-gray mb-5 font-light dark:text-white;
 }
 
 .preview h3 {
   font-size: 28px;
   line-height: 37px;
-  @apply text-dark-gray mb-5 font-bold;
+  @apply text-dark-gray mb-5 font-bold dark:text-white;
 }
 
 .preview h4 {
   font-size: 20px;
   line-height: 37px;
-  @apply text-dark-gray mb-5 font-bold;
+  @apply text-dark-gray mb-5 font-bold dark:text-white;
 }
 
 .preview h5 {
   font-size: 16px;
   line-height: 21px;
-  @apply text-dark-gray mb-5 font-bold;
+  @apply text-dark-gray mb-5 font-bold dark:text-white;
 }
 
 .preview h6 {
   font-size: 14px;
   line-height: 21px;
-  @apply text-orange mb-5 font-bold;
+  @apply text-orange mb-5 font-bold dark:text-white;
 }
 
 .preview p {
-  @apply text-sm font-normal text-light-gray-3 mb-5;
+  @apply text-sm font-normal text-light-gray-3 mb-5 dark:text-light-gray-2;
   line-height: 24px;
 }
 
@@ -75,11 +80,11 @@ body {
 }
 
 .preview ul {
-  @apply px-4 text-sm font-normal text-light-gray-3 mb-5;
+  @apply px-4 text-sm font-normal text-light-gray-3 mb-5 dark:text-light-gray-2;
 }
 
 .preview ol {
-  @apply list-decimal px-4 text-sm font-normal text-light-gray-3 mb-5;
+  @apply list-decimal px-4 text-sm font-normal text-light-gray-3 mb-5 dark:text-light-gray-2;
 }
 
 .preview ul li::before {
@@ -92,19 +97,19 @@ body {
 }
 
 .preview blockquote {
-  @apply p-6 bg-light-gray-1/2 rounded border-l-4 border-orange mb-5;
+  @apply p-6 bg-light-gray-1/2 dark:bg-dark-gray-2 rounded border-l-4 border-orange mb-5;
 }
 
 .preview blockquote p {
-  @apply text-sm text-dark-gray font-bold m-0;
+  @apply text-sm text-dark-gray dark:text-white font-bold m-0;
 }
 
 .preview code {
-  @apply text-dark-gray;
+  @apply text-dark-gray dark:text-white;
 }
 
 .preview pre {
-  @apply p-6 bg-light-gray-1/2 rounded mb-5;
+  @apply p-6 bg-light-gray-1/2 rounded mb-5 dark:bg-dark-gray-2;
 }
 
 .preview pre p {

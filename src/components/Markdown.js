@@ -11,7 +11,7 @@ export const Markdown = ({ showMarkdown, setShowMarkdown }) => {
       className={`basis-full calcHeight ${
         !showMarkdown && "hidden"
       } md2:block md2:basis-2/4`}>
-      <div className="bg-light-gray-1/2 px-4 py-3 flex items-center justify-between">
+      <div className="bg-light-gray-1/2 dark:bg-dark-gray-3 px-4 py-3 flex items-center justify-between">
         <h5 className="text-light-gray-3 text-sm font-medium tracking-2">
           MARKDOWN
         </h5>
@@ -28,7 +28,7 @@ export const Markdown = ({ showMarkdown, setShowMarkdown }) => {
         )}
       </div>
       <textarea
-        className="border w-full py-2 px-4 overflow-y-auto calcHeight2 resize-none font-Roboto-Mono text-dark-gray font-normal text-sm"
+        className="border  dark:border-dark-gray-4 w-full py-2 px-4 overflow-y-auto calcHeight2 resize-none font-Roboto-Mono text-dark-gray dark:text-light-gray-2 font-normal text-sm dark:bg-dark-gray-4"
         value={markdown}
         onChange={handleMarkdownChange}></textarea>
     </div>
