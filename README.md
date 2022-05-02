@@ -32,7 +32,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Light Mode](./screenshots/pic1.PNG)
+![Light Mode + Sidedbar](./screenshots/pic2.PNG)
+![Dark Mode](./screenshots/pic3.PNG)
 
 ### Links
 
