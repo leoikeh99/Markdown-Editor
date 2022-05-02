@@ -5,7 +5,6 @@ import { ReactComponent as DocIcon } from "../assets/icon-document.svg";
 import { ReactComponent as Sun } from "../assets/icon-light-mode.svg";
 import { ReactComponent as Moon } from "../assets/icon-dark-mode.svg";
 import { AddDocument } from "./modals/AddDocument";
-import { ToastContainer } from "react-toastify";
 import moment from "moment";
 
 export const SideBar = () => {
@@ -42,7 +41,6 @@ export const SideBar = () => {
     <div
       id="sidebar"
       className="fixed top-0 -left-64 w-250 bg-dark-gray-3 h-screen px-6 py-7 transition-all">
-      <ToastContainer theme={theme === "light" ? "dark" : "light"} />
       <Logo />
       <p className="text-light-gray-3 font-medium text-sm mb-7 mt-6">
         MY DOCUMENTS

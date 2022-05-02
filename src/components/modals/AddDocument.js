@@ -10,11 +10,6 @@ export const AddDocument = ({ setShowModal }) => {
     if (name.trim() !== "") {
       addDoc(name);
       setShowModal(false);
-      const main = document.getElementById("main");
-      const sidebar = document.getElementById("sidebar");
-
-      main.classList.remove("open");
-      sidebar.classList.remove("openSidebar");
     } else {
       toast.error("Input valid name");
     }

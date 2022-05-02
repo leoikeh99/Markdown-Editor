@@ -12,6 +12,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  @apply transition-colors;
 }
 
 .btn {
@@ -67,7 +68,7 @@ body {
 .preview h6 {
   font-size: 14px;
   line-height: 21px;
-  @apply text-orange mb-5 font-bold dark:text-white;
+  @apply text-orange mb-5 font-bold;
 }
 
 .preview p {
@@ -105,11 +106,11 @@ body {
 }
 
 .preview code {
-  @apply text-dark-gray dark:text-white;
+  @apply text-dark-gray dark:text-white text-xs sm:text-sm;
 }
 
 .preview pre {
-  @apply p-6 bg-light-gray-1/2 rounded mb-5 dark:bg-dark-gray-2;
+  @apply p-3 sm:p-6 bg-light-gray-1/2 rounded mb-5 dark:bg-dark-gray-2;
 }
 
 .preview pre p {
@@ -131,9 +132,6 @@ body {
 
 .overlay {
   @apply fixed top-0 left-0 right-0 bottom-0 bg-black opacity-50;
-}
-
-.menu {
 }
 
 .menu .item {
