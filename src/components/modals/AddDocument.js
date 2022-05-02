@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import MarkdownContext from "../../context/MarkdownContext";
+import { toast } from "react-toastify";
 
 export const AddDocument = ({ setShowModal }) => {
   const { addDoc } = useContext(MarkdownContext);
@@ -14,6 +15,8 @@ export const AddDocument = ({ setShowModal }) => {
 
       main.classList.remove("open");
       sidebar.classList.remove("openSidebar");
+    } else {
+      toast.error("Input valid name");
     }
   };
 

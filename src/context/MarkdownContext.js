@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import data from "../data.json";
+import { toast } from "react-toastify";
 
 const MarkdownContext = createContext();
 
@@ -45,6 +46,7 @@ export const MarkdownProvider = ({ children }) => {
     localStorage.setItem("documents", JSON.stringify([...documents, newDoc]));
     setCurrentDoc(documents.length);
     setMarkdown(newDoc.content);
+    toast.success("Document created");
   };
 
   const deleteDoc = (index) => {
@@ -77,6 +79,7 @@ export const MarkdownProvider = ({ children }) => {
         )
       )
     );
+    toast.success("Changes saved");
   };
 
   return (
