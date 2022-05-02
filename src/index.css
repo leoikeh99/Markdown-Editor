@@ -27,7 +27,7 @@ body {
 }
 
 .calcHeight3 {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 225px);
 }
 
 .preview {

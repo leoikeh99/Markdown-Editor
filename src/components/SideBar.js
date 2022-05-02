@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import MarkdownContext from "../context/MarkdownContext";
+import { ReactComponent as Logo } from "../assets/logo.svg";
 import { ReactComponent as DocIcon } from "../assets/icon-document.svg";
 import { ReactComponent as Sun } from "../assets/icon-light-mode.svg";
 import { ReactComponent as Moon } from "../assets/icon-dark-mode.svg";
@@ -14,10 +15,13 @@ export const SideBar = () => {
   useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.add("dark");
+      setTheme("dark");
     } else if (localStorage.getItem("theme") === "light") {
       document.documentElement.classList.remove("dark");
+      setTheme("light");
     } else {
       document.documentElement.classList.remove("dark");
+      setTheme("light");
     }
   }, []);
 
@@ -37,7 +41,10 @@ export const SideBar = () => {
     <div
       id="sidebar"
       className="fixed top-0 -left-64 w-250 bg-dark-gray-3 h-screen px-6 py-7 transition-all">
-      <p className="text-light-gray-3 font-medium text-sm mb-7">MY DOCUMENTS</p>
+      <Logo />
+      <p className="text-light-gray-3 font-medium text-sm mb-7 mt-6">
+        MY DOCUMENTS
+      </p>
       <button className="btn w-full mb-6" onClick={() => setShowModal(true)}>
         <span>+</span> New Document
       </button>
@@ -61,7 +68,9 @@ export const SideBar = () => {
       </div>
       {showModal && <AddDocument setShowModal={setShowModal} />}
       <div className="flex items-center gap-3">
-        <Moon />
+        <Moon
+          className={`${theme === "dark" ? "fill-white" : "fill-light-gray-4"}`}
+        />
         <div
           className="bg-light-gray-4 w-12 h-6 rounded-2xl relative flex items-center cursor-pointer"
           onClick={toggleTheme}>
@@ -71,7 +80,11 @@ export const SideBar = () => {
             } transition-all`}
           />
         </div>
-        <Sun />
+        <Sun
+          className={`${
+            theme === "light" ? "fill-white" : "fill-light-gray-4"
+          }`}
+        />
       </div>
     </div>
   );
