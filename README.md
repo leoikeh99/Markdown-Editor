@@ -30,7 +30,7 @@ Users should be able to:
 - **Bonus**: If you're building a purely front-end project, use localStorage to save the current state in the browser that persists when the browser is refreshed
 - **Bonus**: Build this project as a full-stack application
 
-### Screenshot
+### Screenshots
 
 ![Light Mode](./screenshots/pic1.PNG)
 ![Light Mode + Sidedbar](./screenshots/pic2.PNG)
