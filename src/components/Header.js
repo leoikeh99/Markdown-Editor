@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ReactComponent as MenuIcon } from "../assets/icon-menu.svg";
+import { ReactComponent as MobileMenuIcon } from "../assets/icon-menu-mobile.svg";
 import { ReactComponent as CloseIcon } from "../assets/icon-close.svg";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { ReactComponent as DocIcon } from "../assets/icon-document.svg";
@@ -36,23 +37,32 @@ export const Header = () => {
   };
 
   return (
-    <div className="w-full h-72 bg-dark-gray-2 flex justify-between items-center pr-4">
-      <div className="h-full w-fit flex items-center gap-6">
+    <div className="w-full h-56 sm2:h-72 bg-dark-gray-2 flex justify-between items-center pr-4">
+      <div className="h-full w-fit flex items-center  gap-6">
         <div className="h-full w-72 bg-dark-gray flex items-center justify-center">
           {!menu ? (
-            <MenuIcon onClick={toggleMenu} className="cursor-pointer" />
+            <>
+              <MenuIcon
+                onClick={toggleMenu}
+                className="cursor-pointer hidden sm2:block"
+              />
+              <MobileMenuIcon
+                onClick={toggleMenu}
+                className="cursor-pointer block sm2:hidden"
+              />
+            </>
           ) : (
             <CloseIcon onClick={toggleMenu} className="cursor-pointer" />
           )}
         </div>
-        <div className="h-full py-4 flex items-center gap-6">
+        <div className="h-full py-4 flex items-center sm2:gap-6">
           <span>
-            <Logo />
+            <Logo className="hidden sm2:block" />
           </span>
-          <div className="w-fit h-full border-l border-light-gray-4 px-5-2 flex items-center gap-4">
+          <div className="w-fit h-full sm2:border-l border-light-gray-4 md2:px-5-2 flex items-center gap-4">
             <DocIcon />
             <div>
-              <p className="text-light-gray-3 font-light text-sm">
+              <p className="text-light-gray-3 font-light text-sm2 hidden sm2:block">
                 Document Name
               </p>
               <p className="text-white font-normal text-base">
@@ -68,7 +78,7 @@ export const Header = () => {
           onClick={() => currentDoc !== false && setShowModal(true)}
         />
         <button className="btn" onClick={save}>
-          <SaveIcon /> Save Changes
+          <SaveIcon /> <span className="hidden sm2:block">Save Changes</span>
         </button>
       </div>
       {showModal && <DeleteDocument setShowModal={setShowModal} />}

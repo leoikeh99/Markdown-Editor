@@ -9,7 +9,12 @@ export const Main = () => {
     <main id="main" className="transition-transform overflow-y-hidden z-0">
       <Header />
       <div className="flex">
-        {showMarkdown && <Markdown />}
+        {showMarkdown && (
+          <Markdown
+            showMarkdown={showMarkdown}
+            setShowMarkdown={setShowMarkdown}
+          />
+        )}
         <Preview
           showMarkdown={showMarkdown}
           setShowMarkdown={setShowMarkdown}

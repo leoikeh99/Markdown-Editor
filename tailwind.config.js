@@ -19,6 +19,7 @@ module.exports = {
         95: "95%",
         250: "250px",
         343: "343px",
+        56: "56px",
       },
       fontFamily: {
         Roboto: ['"Roboto"', "san-serif"],
@@ -39,6 +40,10 @@ module.exports = {
       },
       maxWidth: {
         672: "672px",
+      },
+      screens: {
+        md2: "875px",
+        sm2: "695px",
       },
     },
   },

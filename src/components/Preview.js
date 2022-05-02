@@ -8,9 +8,9 @@ export const Preview = ({ showMarkdown, setShowMarkdown }) => {
   const { markdown } = useContext(MarkdownContext);
   return (
     <div
-      className={`${
-        showMarkdown ? "basis-2/4" : "basis-full"
-      } border-l border-light-gray calcHeight`}>
+      className={`${showMarkdown ? "basis-2/4" : "basis-full"} ${
+        showMarkdown ? "hidden" : "block"
+      } md2:block border-l border-light-gray calcHeight`}>
       <div className="bg-light-gray-1/2 px-4 py-3 flex items-center justify-between">
         <h5 className="text-light-gray-3 text-sm font-medium tracking-2">
           PREVIEW
@@ -29,7 +29,7 @@ export const Preview = ({ showMarkdown, setShowMarkdown }) => {
       </div>
       <div
         className={`py-2 px-4 overflow-y-auto calcHeight2 preview ${
-          !showMarkdown && "max-w-672"
+          !showMarkdown && "md2:max-w-672"
         } m-auto`}>
         <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
