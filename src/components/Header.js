@@ -59,7 +59,7 @@ export const Header = () => {
           <span>
             <Logo className="hidden sm2:block" />
           </span>
-          <div className="w-fit h-full sm2:border-l border-light-gray-4 md2:px-5-2 flex items-center gap-4">
+          <div className="w-fit h-full sm2:border-l border-light-gray-4 sm2:px-5-2 flex items-center gap-4">
             <DocIcon />
             <div>
               <p className="text-light-gray-3 font-light text-sm2 hidden sm2:block">
